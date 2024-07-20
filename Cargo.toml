@@ -1,0 +1,12 @@
+[package]
+name = "time-range-ext"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+time = {  version = "0.3.36", features = ["serde", "macros"] }
+serde = {  version = "1.0.204", features = ["derive", "default"], optional = true }
+serde_json = { version = "1.0.120", optional = true }
+
+[features]
+serde = ["dep:serde", "dep:serde_json"]
